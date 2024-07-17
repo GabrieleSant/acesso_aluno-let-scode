@@ -15,6 +15,7 @@ function listarAlunos() {
 
     const foto = document.createElement('img');
     foto.setAttribute('src', aluno.foto);
+    foto.setAttribute('width', "50%")
 
     const idade = document.createElement('p');
     idade.innerHTML = `Idade: ${aluno.idade}<br>`;

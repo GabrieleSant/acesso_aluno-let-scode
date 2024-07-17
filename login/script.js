@@ -61,7 +61,7 @@ if (botaoRegistrar) {
         }
 
         if(mesmoEmail(email) === false && camposVazios() === false){
-            alert('111111111')
+            // alert('111111111')
             let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
             usuarios.push({ usuario, email, idade, cidade, foto, senha });
             localStorage.setItem("usuarios", JSON.stringify(usuarios));
@@ -87,18 +87,23 @@ if(botaoLogin){
     })
 }
 
+// Tela Bem-Vindo
 let tituloDaSecao = document.getElementById('tituloDaSecao')
 if(tituloDaSecao){
     
     let usuario = JSON.parse(localStorage.getItem('usuarioLogado')) || [];
+
     let titulo = document.getElementById('titulo')
+
     let imagem = document.createElement('img')
+    imagem.setAttribute('src', usuario.foto)
+    imagem.setAttribute('width', "80%")
+
     let descricao = document.createElement('p')
     descricao.innerHTML = `<br> Cidade: ${usuario.cidade}
         <br><br>Idade: ${usuario.idade}
         <br><br>Email: ${usuario.email}`
 
-    imagem.setAttribute('src', usuario.foto)
 
     tituloDaSecao.textContent += usuario.usuario + '!'
     titulo.appendChild(tituloDaSecao)
