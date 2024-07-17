@@ -1,0 +1,97 @@
+:root {
+    --roxo: #7680b5;
+    --black: #1a1a2e;
+    --azul: #333d57;
+    --azulClaro: #bcddf0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%; 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--black);
+}
+
+.container {
+    /* display: flex;
+    flex-direction: column; */
+    width: 280px;
+    height: 300px;
+    padding: 25px 40px;
+    background: var(--azul);
+    box-shadow: 0 0 10px #3d9eaccc;
+    border-radius: 5px;
+}
+
+h2{
+    color: var(--azulClaro);
+    margin-bottom: 20px;
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    padding: 7px;
+    border-radius: 30px;
+    background-color: #1a1a2e;
+    color: #7680b5;
+}
+
+input::placeholder{
+    color: #8597ad;
+}
+
+.paragrafo {
+    font-size: small;
+    color: var(--azulClaro);
+}
+
+button {
+    background-color: var(--roxo);
+    color: #d3f1f7;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: #50558b;
+}
+
+button:active {
+    transform: scale(1.05);
+}
+
+a{
+    color: #aa73cd;
+}
+
+.botao-sair {
+    width: 50px;
+}
+
+.botao-sair:hover {
+    background: rgb(109, 109, 230);
+}
+
+.botao-sair:active {
+    transform: scale(1.05);
+}
